@@ -1,6 +1,10 @@
 import mongoose from "mongoose";
 
 const incidentSchema = new mongoose.Schema({
+    title : {
+        type: String,
+        required: true
+    },
     description: {
         type: String,
         required: true
@@ -12,6 +16,11 @@ const incidentSchema = new mongoose.Schema({
     lng:{
         type: Number,
         required: true
+    },
+    isEmailSent : {
+        type: Boolean,
+        required: false,
+        default: false
     }
 });
 
